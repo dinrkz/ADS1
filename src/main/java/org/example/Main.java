@@ -1,14 +1,14 @@
-public static int mystery( int n ){
-    if(n<10){
-        return (10 * n) +n;
-    } else{
-        int a = mystery(n /10);
-        int b = mystery(n %10);
-        return (100 * a) +b;
+//Part 1. Recursion with Numbers
+//Task 1. Print Digits of a Number
+package org.example;
+class Main {
+    public static void horizontalline(int n) {
+        if(n<10){
+            return ;
+        }else{
+            int a=n/10;
+            int b=n%10;
+            System.out.println(b);
+        }
     }
-}
-
-void main() {
-    System.out.print(mystery(348));
-
 }
