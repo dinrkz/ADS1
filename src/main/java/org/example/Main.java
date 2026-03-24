@@ -1,8 +1,7 @@
 //Part 1. Recursion with Numbers
 //Task 1. Print Digits of a Number
 import java.util.Scanner;
-/*class Main {
-    public static void horizontalline(int n) {
+public static void horizontalline(int n) {
         if(n<10){
             System.out.println(n);
         }else{
@@ -15,7 +14,6 @@ import java.util.Scanner;
         int number = input.nextInt();
         horizontalline(number);
     }
-}*/
 
 
 
@@ -41,12 +39,12 @@ import java.util.Scanner;
 
 
 //Task 3. Prime Number Check
-public String isPrime(int n, int i) {
+/*public String isPrime(int n, int i) {
     if (n <= 2) return (n == 2) ? "Prime" : "Composite";
     if (n % i == 0) return "Composite";
     if (i * i > n) return "Prime";
     return isPrime(n, i + 1);
-}
+}*/
 
 
 
@@ -106,7 +104,7 @@ public String isPrime(int n, int i) {
 
 
 //Task 7. Reverse Output
-public void reverseOutput(Scanner sc, int n) {
+/*public void reverseOutput(Scanner sc, int n) {
     if (n == 0) return;
     int current = sc.nextInt();
     reverseOutput(sc, n - 1);
@@ -137,4 +135,4 @@ public int gcd(int a, int b) {
 }
 
         void main() {
-        }
+        }*/
