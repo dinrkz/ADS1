@@ -53,7 +53,6 @@ public class BankingSystem{
                 System.out.print("Initial balance: ");
                 double bal = scanner.nextDouble();
                 String accNum = "ACC" + (int) (Math.random() * 1000);
-                // Task 5: Добавляем в очередь заявок
                 accountRequests.add(new BankAccount(accNum, name, bal));
                 System.out.println("Request submitted to Admin queue.");
             }
@@ -62,8 +61,8 @@ public class BankingSystem{
                 if (account != null) {
                     System.out.print("Deposit amount: ");
                     double amount = scanner.nextDouble();
-                    account.balance += amount; // Task 2
-                    transactionHistory.push("Deposit " + amount + " to " + account.username); // Task 3
+                    account.balance += amount;
+                    transactionHistory.push("Deposit " + amount + " to " + account.username);
                     System.out.println("New balance: " + account.balance);
                 }
             }
@@ -84,7 +83,7 @@ public class BankingSystem{
             case 4 -> {
                 System.out.print("Enter bill name (e.g., Electricity): ");
                 String bill = scanner.nextLine();
-                billQueue.add(bill); // Task 4
+                billQueue.add(bill);
                 transactionHistory.push("Bill added: " + bill);
                 System.out.println("Bill added to queue.");
             }
@@ -124,7 +123,7 @@ public class BankingSystem{
             case 1 -> {
                 while (!accountRequests.isEmpty()) {
                     BankAccount req = accountRequests.poll();
-                    accounts.add(req); // Перемещаем в основной список
+                    accounts.add(req);
                     System.out.println("Approved account for: " + req.username);
                 }
             }
